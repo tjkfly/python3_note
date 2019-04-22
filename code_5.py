@@ -30,10 +30,26 @@ http://docs.python.org/3/library/functions.html#abs
 	 在Python中，定义一个函数要使用def语句，
 	 依次写出函数名、括号、括号中的参数和冒号:，
 	 然后，在缩进块中编写函数体，函数的返回值用return语句返回。
+	 参数检查
+     解释器可以检查参数个数 ，但是参数类型检查需要自写
 """
 def my_abs(x):
+	if not isinstance(x,(int ,float)):
+		raiseTypeError('bad operand type')
 	if x >= 0:
 		return x
 	else:
 		return -x
 print(my_abs(-90))
+"""
+空函数 啥也不做   
+"""
+def nop():
+	pass
+
+"""
+  返回多个值，实际上返回了一个元组tuple
+"""	
+"""
+位置参数，默认参数，可变参数，关键字参数，命名关键字参数，参数组合
+"""
